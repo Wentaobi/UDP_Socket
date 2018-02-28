@@ -10,3 +10,8 @@ server端
 client端
 新建一个数据报socket
 收发数据
+
+
+#Notes
+当接收端有延时，比如sleep或者在真实场景中产生的延时，需要setsockopt()将接收缓存(SO_RCVBUF)，（本方法不能从根本解决问题，只能改善）
+或采用多线程接包处理
